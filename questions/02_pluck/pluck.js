@@ -18,6 +18,14 @@ returns { a: 1, c: 42};
 
 function pluck(obj, elements) {
   // YOUR CODE
+  let retObj = {};
+  for(let i = 0; i < elements.length; i ++) {
+    if(obj[elements[i]] !== undefined) {
+      retObj[elements[i]] = obj[elements[i]];
+      console.log(elements[i], obj[elements[i]]);
+    }
+  }
+  return retObj;
 }
 
 module.exports = { pluck };
