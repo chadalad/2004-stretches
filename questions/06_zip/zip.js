@@ -9,6 +9,26 @@ zip([
 
 function zip(objs) {
   // YOUR CODE
+  
+  //classic reduce case
+  let retObj = objs.reduce((acc, currentElement) => {
+    //iterate through each of the elements
+    for (let prop in currentElement) {
+      if (!acc.hasOwnProperty(prop)) {
+        acc[prop] = currentElement[prop];
+        //console.log(prop, acc[prop], acc)
+      } else {
+        acc[prop] += currentElement[prop];
+      }
+    }
+    
+    //console.log(currentElement);
+    return acc;
+  }, {})
+
+  //console.log(retObj);
+  return retObj;
+
 }
 
 module.exports = { zip };
