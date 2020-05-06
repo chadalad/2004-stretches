@@ -1,24 +1,30 @@
-const lockBox = (code, description) => {
+const lockBox = (code, message) => {
   // write code here
-  if (typeof(code) !== Number) {
-    throw 'invalid arg types';
+  if (typeof code !== 'number') {
+    throw new Error('invalid code type');
   }
-  else if (typeof(description) !== String) {
-    throw 'invalid arg types';
+  else if (typeof description !== 'String') {
+    throw new Error('invalid message type');
   }
-
-  const modCode = (code, newCode) => {
-    code = newCode;
-    return code;
+  /*
+  else {
+    const modCode = (code, newCode) => {
+      code = newCode;
+      return code;
+    }
+  
+    const modMessage = () => {
+  
+    }
+  
+    const revealMessage = () => {
+  
+    }
   }
-
-  const modMessage = () => {
-
-  }
-
-  const revealMessage = () => {
-
-  }
+  */
+ let accessCode = code;
+ let secretMessage = message;
+  
 
 
 };
