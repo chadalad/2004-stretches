@@ -18,6 +18,7 @@ ex 2.
 
 const keysToRooms = (rooms) => {
   //YOUR CODE HERE
+  console.log('this is a test of git');
 };
 
 module.exports = { keysToRooms };
