@@ -18,7 +18,24 @@ ex 2.
 
 const keysToRooms = (rooms) => {
   //YOUR CODE HERE
-  console.log('this is a test of git');
+  const keysAcquired = [];
+  const currentIndex = 0;
+
+  rooms.forEach(element => {
+    console.log(element.length);
+    if(element.length >= 1) {
+      return false;
+    } else {
+      if (keysAcquired.includes(currentIndex))
+      keysAcquired.push(element[0]);
+    }
+    
+    console.log(element.value);
+    currentIndex++;
+  })
+
+
+  return true;
 };
 
 module.exports = { keysToRooms };
