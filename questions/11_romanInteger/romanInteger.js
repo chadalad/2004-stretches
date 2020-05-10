@@ -22,8 +22,63 @@ examples:
 1994 // MCMXCIV
 */
 
-const romanInteger = () => {
+const romanInteger = (num) => {
   //YOUR CODE HERE
+  if (typeof num !== 'number') throw new Error('invalid number');
+  if (num < 1 || num >= 4000) throw new Error('invalid number');
+  let retStr = '';
+  let workingNum = num;
+
+
+  while (workingNum > 0) {
+    if (workingNum - 1000 >= 0) {
+      retStr += 'M';
+      workingNum -= 1000;
+    } else if (workingNum - 900 >=0) {
+      retStr += 'CM';
+      workingNum -= 900;
+    } else if (workingNum - 500 >=0) {
+      retStr += 'D';
+      workingNum -= 500;
+    } else if (workingNum - 400 >=0) {
+      retStr += 'CD';
+      workingNum -= 400;
+    } else if (workingNum - 100 >=0) {
+      retStr += 'C';
+      workingNum -= 100;
+    } else if (workingNum - 90 >=0) {
+      retStr += 'XC';
+      workingNum -= 90;
+    } else if (workingNum - 50 >=0) {
+      retStr += 'L';
+      workingNum -= 50;
+    } else if (workingNum - 40 >=0) {
+      retStr += 'XL';
+      workingNum -= 40;
+    } else if (workingNum - 10 >=0) {
+      retStr += 'X';
+      workingNum -= 10;
+    } else if (workingNum - 9 >=0) {
+      retStr += 'IX';
+      workingNum -= 9;
+    } else if (workingNum - 5 >=0) {
+      retStr += 'V';
+      workingNum -= 5;
+    } else if (workingNum - 4 >=0) {
+      retStr += 'IV';
+      workingNum -= 4;
+    } else if (workingNum - 1 >=0) {
+      retStr += 'I';
+      workingNum -= 1;
+    }
+  }
+
+  
+  
+
+  console.log(retStr);
+  return retStr;
 };
+
 
 module.exports = { romanInteger };
