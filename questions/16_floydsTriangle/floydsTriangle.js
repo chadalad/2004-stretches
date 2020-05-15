@@ -15,7 +15,6 @@ const floydsTriangle = n => {
             rowStr = rowStr + count;
             count++;
         }
-        //console.log(rowStr, n, count);
         if (i !== n - 1) rowStr += '\n';
         retStr += rowStr;
     }
