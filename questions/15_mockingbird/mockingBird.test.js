@@ -9,10 +9,10 @@ describe('Learn how to write mock functions!', () => {
     capitalizeWordMock = jest.fn(capitalizeWord);
 
     // uncomment the console.log to see all the properties that jest adds to a mock
-    console.log(
-      '**************** capitalizeWordMock properties \n',
-      capitalizeWordMock,
-    );
+    // console.log(
+    //   '**************** capitalizeWordMock properties \n',
+    //   capitalizeWordMock,
+    // );
 
     // lets run the function a few times
     capitalizeWordMock('i');
@@ -22,10 +22,10 @@ describe('Learn how to write mock functions!', () => {
     // the .mock property is where the information on calls and results lives
     // mock functions retain a history of every time they are called
 
-    console.log(
-      '********** capitalizeWordMock.mock \n',
-      capitalizeWordMock.mock.instances,
-    );
+    // console.log(
+    //   '********** capitalizeWordMock.mock \n',
+    //   capitalizeWordMock.mock.instances,
+    // );
 
     const { calls, results } = capitalizeWordMock.mock;
 
@@ -34,10 +34,10 @@ describe('Learn how to write mock functions!', () => {
       expect.arrayContaining([['i'], ['love'], ['javascript']])
     );
 
-    console.log(
-      '********** capitalizeWordMock.mock \n',
-      capitalizeWordMock.mock.instances,
-    );
+    // console.log(
+    //   '********** capitalizeWordMock.mock \n',
+    //   capitalizeWordMock.mock.instances,
+    // );
 
     // and all the outputs
     expect(results).toEqual(
@@ -85,15 +85,15 @@ describe('Learn how to write mock functions!', () => {
       // create a mock for the bird function
       //const birdMock = null;
       const birdMock = jest.fn(bird);
-      console.log('birdmock ... \n',
-      birdMock
-      );
+      // console.log('birdmock ... \n',
+      // birdMock
+      // );
 
       const repeaterOutput = repeater(birdMock, numberOfRepeats);
 
-      console.log(
-        'repeaterOutput... \n',
-        repeaterOutput)
+      // console.log(
+      //   'repeaterOutput... \n',
+      //   repeaterOutput)
 
       // the expected output will be an array of return values from birdMock.
       const expectedOutput = [];
@@ -103,7 +103,8 @@ describe('Learn how to write mock functions!', () => {
 
       // fill out expectedOutput using our mock return values
       birdMock.mock.results.forEach( el => {
-        expectedOutput.push(el)
+        expectedOutput.push(el.value);
+        //console.log(el);
       });
 
       expect(repeaterOutput).toEqual(expectedOutput);
