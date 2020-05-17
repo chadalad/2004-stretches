@@ -2,6 +2,8 @@ const { arrayexchange } = require('./arrayexchange');
 describe('arrayexchange functionality', () => {
   it('arrayexchange should take two arrays as arguments or throw', () => {
     expect(() => arrayexchange(2, [a, b, c])).toThrow();
+    expect(() => arrayexchange([a, b, c], 2)).toThrow();
+    expect(() => arrayexchange(2, 2)).toThrow();
   });
   it('arrayexchange functionality should swap and reverse', () => {
     const a = ['1', '2', '3', '4', '5', '6', '7'];
