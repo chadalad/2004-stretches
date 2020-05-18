@@ -19,6 +19,23 @@
 //getrootvalue(object,40)=>'one'
 //returns -1 if value isn't found
 
-const getrootvalue = () => {};
+const getrootvalue = (obj, val) => {
+
+    // Object.entries(obj).forEach(rootLevel => {
+    //     console.log(root);
+    //     const root = rootLevel[0];
+    //     // Object.entries(rootLevel).forEach(elem => {
+    //     //     console.log(elem);
+    //     // })
+    // })
+
+    const objArr = Object.entries(obj);
+
+    for ( let i = 0; i < objArr.length; i++) {
+        console.log(objArr[i]);
+        let root = objArr[i][0];
+    }
+
+};
 
 module.exports = { getrootvalue };
