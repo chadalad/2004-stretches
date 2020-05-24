@@ -1,24 +1,25 @@
 //YOU WILL BE EDITING THIS CODE
 
 class CoffeeShop {
-  constructer() {
-    this.pendingOrders = '';
+  constructor() {
+    this.pendingOrders = [];
     this.completedOrders = [];
     this.menu = ['mocha', 'latte', 'flat-white', 'drip', 'espresso'];
   }
 
   inputOrder(str) {
-    this.pendingOrders.push();
+    this.pendingOrders.push(str);
   }
 
   makeCoffee() {
-    const cofeeOrder = pendingOrders.shift();
-
-    this.completedOrders.push(coffeeorder);
+    if (this.pendingOrders.length > 0) {
+      const coffeeOrder = this.pendingOrders.shift();
+      this.completedOrders.push(coffeeOrder);
+    }
   }
 
   printMenu() {
-    return menu;
+    return this.menu;
   }
 }
 
