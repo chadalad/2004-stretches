@@ -3,6 +3,7 @@ const { RPS } = require('./rps');
 describe('Rock-Paper-Scissors', () => {
   test('It returns the names of the players', () => {
     const gameOne = new RPS('John', 'Jane');
+    console.log(gameOne.players.length)
     expect(gameOne.players.length).toEqual(2);
   });
   test('It returns the result of gameplay.', () => {
