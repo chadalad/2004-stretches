@@ -16,4 +16,15 @@
 
 // YOUR CODE (intentionally blank):
 
+Object.defineProperty(Array.prototype, 'next', {
+    value: function() {
+        if(i === undefined) {
+            console.log(this[0])
+        } else {
+            console.log(this[i])
+        }
+        
+    }
+})
+
 // no export statement required
