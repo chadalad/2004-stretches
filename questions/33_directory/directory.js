@@ -10,8 +10,22 @@
 // };
 // directory(phonebookData)=>{ 'a/b/c': 12 }
 
-const directory = () => {
+let retObj = {};
+
+const directory = (obj) => {
   //code in here
+  
+
+  Object.keys(obj).forEach(key => {
+    console.log(key)
+    if (typeof obj[key] === 'object') {
+      console.log(obj[key])
+      directory(obj[key]);
+    }
+    else retObj[key] = obj[key];
+  })
+
+  return retObj;
 };
 
 module.exports = { directory };
