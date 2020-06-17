@@ -3,6 +3,7 @@
 
 class Iterator {
   //write code here
+
   constructor(arra) {
     if(typeof arra !== 'object') throw new Error('arg must be arr');
     const arr = arra;
