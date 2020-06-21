@@ -30,13 +30,12 @@ class Box {
     return setTimeout(() => this.unpack(), dur);
   }
   //*****YOUR CODE STARTS HERE******
-  expand(index, additionalBoxes) {
-    this.capacity += additionalBoxes.length;
-    
+  expand(addToCapacity, additionalBoxes) {
+    this.capacity += addToCapacity;
     //this.contents.push(additionalBoxes)
-    // additionalBoxes.forEach(element => {
-    //   this.contents.push(element)
-    // });
+    additionalBoxes.forEach(element => {
+      this.contents.push(element)
+    });
       
     }; 
 }
